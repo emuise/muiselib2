@@ -2,14 +2,14 @@ Package: muiselib2
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Evan", "Muise", , "evanmuise@gmail.com", role = c("aut", "cre"))
+Description: Evan's Default Themes and ggplot2 Colours.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Imports: 
-    ggplot2,
-    RColorBrewer
+    RColorBrewer,
+    ggplot2
 URL: https://github.com/emuise/muiselib2
 BugReports: https://github.com/emuise/muiselib2/issues
