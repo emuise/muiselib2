@@ -6,11 +6,13 @@
 #' @export
 muiselib_setup <- function() {
   
-  # 1. Set the Global ggplot2 Theme
-  main_theme <- ggplot2::theme_bw() +
-                ggplot2::theme(panel.grid = ggplot2::element_blank())
-  
-  ggplot2::theme_set(main_theme)
+  # Check if font is available to avoid warnings later, fallback to sans if not
+  base_font <- "IBM Plex Sans"
+  if (requireNamespace("systemfonts", quietly = TRUE) && !systemfonts::system_fonts()$family[match(base_font, systemfonts::system_fonts()$family, nomatch = 0)] == base_font) {
+     warning(sprintf("Font '%s' not found. Falling back to default sans.", base_font))
+     base_font <- "sans"
+  }
+  ggplot2::theme_set(ggplot2::theme_classic(base_family = base_font))
 
   # 2. Define custom palettes
   pal_list <- list(
