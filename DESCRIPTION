@@ -11,3 +11,5 @@ RoxygenNote: 7.3.3
 Imports: 
     ggplot2,
     RColorBrewer
+URL: https://github.com/emuise/muiselib2
+BugReports: https://github.com/emuise/muiselib2/issues
