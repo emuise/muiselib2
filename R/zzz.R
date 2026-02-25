@@ -5,14 +5,9 @@
 #' 
 #' @export
 muiselib_setup <- function() {
-  
-  # Check if font is available to avoid warnings later, fallback to sans if not
-  base_font <- "IBM Plex Sans"
-  if (requireNamespace("systemfonts", quietly = TRUE) && !systemfonts::system_fonts()$family[match(base_font, systemfonts::system_fonts()$family, nomatch = 0)] == base_font) {
-     warning(sprintf("Font '%s' not found. Falling back to default sans.", base_font))
-     base_font <- "sans"
-  }
-  ggplot2::theme_set(ggplot2::theme_classic(base_family = base_font))
+
+  ggplot2::theme_set(ggplot2::theme_bw() +
+    theme(panel.grid = element_blank()))
 
   # 2. Define custom palettes
   pal_list <- list(
