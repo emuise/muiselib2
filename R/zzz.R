@@ -7,7 +7,7 @@
 muiselib_setup <- function() {
 
   ggplot2::theme_set(ggplot2::theme_bw() +
-    theme(panel.grid = element_blank()))
+    ggplot2::theme(panel.grid = ggplot2::element_blank()))
 
   # 2. Define custom palettes
   pal_list <- list(
